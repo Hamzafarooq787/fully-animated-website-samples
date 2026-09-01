@@ -1,9 +1,21 @@
 export const navLinks = [
-  { label: "Services", href: "#services" },
-  { label: "Work", href: "#work" },
-  { label: "Process", href: "#process" },
-  { label: "Results", href: "#results" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Work", href: "/#work" },
+  { label: "Process", href: "/#process" },
+  { label: "Results", href: "/#results" },
+  { label: "FAQ", href: "/#faq" },
+];
+
+export const serviceLinks = [
+  {
+    label: "Google Ads Management",
+    href: "/services/google-ads",
+    description: "Search, Shopping & Performance Max campaigns",
+  },
+  {
+    label: "All Services",
+    href: "/#services",
+    description: "Brand, web, product & growth",
+  },
 ];
 
 export const trustIndicators = [
