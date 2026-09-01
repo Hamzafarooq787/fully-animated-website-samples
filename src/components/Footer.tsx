@@ -6,20 +6,31 @@ const footerColumns = [
   {
     title: "Services",
     links: [
-      "Brand & Identity",
-      "Web Design",
-      "Web Development",
-      "Product Design",
-      "Digital Marketing",
+      { label: "Google Ads Management", href: "/services/google-ads" },
+      { label: "Brand & Identity", href: "#" },
+      { label: "Web Design", href: "#" },
+      { label: "Web Development", href: "#" },
+      { label: "Product Design", href: "#" },
+      { label: "Digital Marketing", href: "#" },
     ],
   },
   {
     title: "Company",
-    links: ["About Us", "Careers", "Our Work", "Contact"],
+    links: [
+      { label: "About Us", href: "#" },
+      { label: "Careers", href: "#" },
+      { label: "Our Work", href: "/#work" },
+      { label: "Contact", href: "/#contact" },
+    ],
   },
   {
     title: "Resources",
-    links: ["Insights", "Case Studies", "Playbook", "FAQ"],
+    links: [
+      { label: "Insights", href: "#" },
+      { label: "Case Studies", href: "/#work" },
+      { label: "Playbook", href: "#" },
+      { label: "FAQ", href: "/#faq" },
+    ],
   },
 ];
 
@@ -30,7 +41,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.3fr_repeat(3,1fr)]">
           <div>
             <Link
-              href="#top"
+              href="/"
               className="flex items-center gap-2 text-base font-semibold tracking-tight text-foreground"
             >
               <span className="flex size-8 items-center justify-center rounded-lg bg-accent/15 text-accent-light">
@@ -67,12 +78,12 @@ export default function Footer() {
               </h3>
               <ul className="mt-5 flex flex-col gap-3">
                 {column.links.map((link) => (
-                  <li key={link}>
+                  <li key={link.label}>
                     <a
-                      href="#"
+                      href={link.href}
                       className="text-sm text-muted transition-colors duration-200 hover:text-foreground"
                     >
-                      {link}
+                      {link.label}
                     </a>
                   </li>
                 ))}
